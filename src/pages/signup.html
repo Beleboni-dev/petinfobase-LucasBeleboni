@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/signup.css">
+    <link rel="stylesheet" href="../styles/toast.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-g1ODVpSQ33+gzT84TUTjzNHpXZlq+h+D6vyZRca6kbjC6dRlt6+Q2AP7o8JgF2VXUE04n+vGGfV7xrv1JSgJrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../scripts/signup.js" defer></script>
+    <title>Cadastrar</title>
+</head>
+<body>
+    
+    <main>
+        <section class="left-container">
+            <div class="left-container__header">
+                <h2 class="font3-500">Cadastro</h2>
+                <button class="back-to-login">Voltar para o login</button>
+            </div>
+            <form>
+                <div>
+                    <label for="user-input" class="font4-500">Usuário</label>
+                    <input type="text" id="user-input" placeholder="Digite seu usuário aqui" class="font4-400">
+                </div>
+                <div>
+                    <label for="email-input" class="font4-500">E-mail</label>
+                    <input type="email" id="email-input" placeholder="Digite seu e-mail aqui" class="font4-400">
+                </div>
+                <div>
+                    <label for="link-photo-input" class="font4-500">Link da foto do perfil</label>
+                    <input type="text" id="link-photo-input" placeholder="Insira o link aqui" class="font4-400">
+                </div>
+                <div>
+                    <label for="password-input" class="font4-500">Senha</label>
+                    <input type="password" id="password-input" placeholder="Digite sua senha aqui" class="font4-400">
+                    <span class="password-status-nok font5-400 hide">A senha está incorreta</span>
+                </div>
+                <button class="form-button-signup font4-500">Cadastrar</button>
+            </form>
+            <div class="left-container__box-action">
+                <button class="signup-box-action__button font4-500 back-to-login">Voltar para o login</button>
+            </div>
+        </section>
+        <section class="right-container">
+            <h1 class="font1-600">Petinfo</h1>
+            <h2 class="font1-600">Ooooooba!</h2>
+            <p class="font4-400">Agora vamos poder contribuir para o bem estar do seu pet por meio do conhecimento</p>
+            <div class="container-grid-images">
+                <div class="item item1"></div>
+                <div class="item item2"></div>
+                <div class="item item3"></div>
+                <div class="item item4"></div>
+            </div>
+        </section>
+    </main>
+    <div id="toast-container">
+        <div id="success-toast" class="toast hide">
+            <div class="success-toast__title-container">
+                <i class="fa-solid fa-circle-check"></i>
+                <h2 class="font4-500">Sua conta foi criada com sucesso!</h2>
+            </div>
+            <div class="success-toast__text-container">
+          <p class="font5-400">Agora você pode acessar os conteúdos utilizando seu usuário e senha na página de login: <a href="../../index.html">Acessar página de login</a></p>
+            </div>
+        </div>
+</body>
+</html>

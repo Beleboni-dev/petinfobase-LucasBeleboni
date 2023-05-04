@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/dialog.css">
+    <link rel="stylesheet" href="../styles/toast.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        integrity="sha512-g1ODVpSQ33+gzT84TUTjzNHpXZlq+h+D6vyZRca6kbjC6dRlt6+Q2AP7o8JgF2VXUE04n+vGGfV7xrv1JSgJrQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../scripts/dashboard.js" defer></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="font2-500">Petinfo</h1>
+        <div class="user-box">
+            <button class="user-box__button-create-post font4-500" id="create-post-button">Criar publicação</button>
+            <div id="img-user-options" class="user-box__image-container">
+            </div>
+            <div id="user-box-options" class="user-box__options-logout hide">
+                <!-- dashboard.js && render.js -->
+            </div>
+        </div>
+    </header>
+    <div class="feed-title__container">
+        <h2 class="feed-title font3-500">Feed</h2>
+        <div class="to-fit">
+        </div>
+    </div>
+    <main>
+        <div class="feed-container">
+
+        </div>
+    </main>
+
+    <dialog id="dialog-open-post">
+        <div class="modal-open-post__header">
+            <div class="post__header-left-container">
+                <div class="post__header-image-container modal-image__container">
+                    <img src="../assets/images/login/Rectangle2.png" alt="user-picture">
+                </div>
+                <span class="post__header-username font5-500">Nome do Usuário</span>
+                <span class="font5-500 post__header__pip">| </span>
+                <span class="post__header-create-at font5-500">Outubro de 2022</span>
+            </div>
+            <button class="font1-nunito close-modal">X</button>
+        </div>
+        <div class="modal-open-post__body">
+            <h2 class="post__title font2-600">Outubro Rosa: Detalhes sobre a importância da prevenção do câncer de mama
+                em cadelas e gatas</h2>
+            <div class="modal-open-post__content font4-400">
+                <span>Assim como em humanos, cadelas e gatas também podem desenvolver câncer de mama. Ainda hoje, para
+                    ambas as espécies, o câncer de mama tem maior incidência. Mesmo com a evolução da medicina
+                    veterinária e da oncologia, o câncer de mama muitas vezes não tem cura, sendo o tratamento paliativo
+                    uma alternativa para dar conforto às fêmeas. </span>
+
+                <span>Por isso, a conscientização sobre o tema é uma das ações de prevenção de maior importância,
+                    principalmente para a campanha do outubro rosa. Então como podemos ajudar a prevenir o câncer de
+                    mama em cadelas e gatas?</span>
+
+                <span>Assim como outros tipos de câncer, o câncer de mama pode ter inúmeras causas. Entre as mais
+                    comuns, temos fatores genéticos, como predisposição de algumas raças, exposição à poluição,
+                    tabagismo passivo, obesidade, além do fato de os pets estarem vivendo mais, o que também pode causar
+                    maior chances de tumores. No caso do câncer de mama, a influência hormonal é um dos fatores de maior
+                    contribuição para o aparecimento dessa doença.</span>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="dialog-new-post">
+        <div class="modal-new-post__header">
+            <div class="post__header-left-container">
+                <h2 class="font3-500">Criando novo post</h2>
+            </div>
+            <button class="font1-nunito close-modal">X</button>
+        </div>
+        <div class="modal-new-post__form-container">
+            <form class="modal-new-post__form">
+                <label class="modal-new-post__title-post font4-500" for="input-new-title">Titulo do post</label>
+                <input class="modal-new-post__title-input font4-400" type="text" name="input-new-title"
+                    id="input-new-title" placeholder="Digite o título aqui...">
+
+                <label for="new-post-textarea" class="modal-new-post__textarea font4-500">Conteúdo do post</label>
+                <textarea class="modal-new-post__textarea font4-400" name="new-post-textarea" id="new-post-textarea"
+                    cols="30" rows="10" placeholder="Desenvolva o conteúdo do post aqui..."></textarea>
+            </form>
+            <div class="modal-new-post__buttons-container">
+                <button class="modal-new-post__button button--cancel font4-500 ">Cancelar</button>
+                <button class="modal-new-post__button button--save font4-500">Publicar</button>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="dialog-edit-post">
+        <div class="modal-edit-post__header">
+            <div class="post__header-left-container">
+                <h2 class="font3-500">Edição</h2>
+            </div>
+            <button class="font1-nunito close-modal">X</button>
+        </div>
+        <div class="modal-edit-post__form-container">
+            <form class="modal-edit-post__form">
+                <label class="modal-edit-post__title-post font4-500" for="input-title">Titulo do post</label>
+                <input class="modal-edit-post__title-input font4-400" type="text" name="input-title" id="input-title">
+
+                <label for="edit-post-textarea" class="modal-edit-post__textarea font4-500">Conteúdo do post</label>
+                <textarea class="modal-edit-post__textarea font4-400" name="edit-post-textarea" id="edit-post-textarea"
+                    cols="30" rows="10"></textarea>
+            </form>
+            <div class="modal-edit-post__buttons-container">
+                <button class="modal-edit-post__button button--cancel font4-500">Cancelar</button>
+                <button class="modal-edit-post__button button--save font4-500" id="button-save">Salvar
+                    alterações</button>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="dialog-delete-post">
+        <div class="modal-delete-post__header">
+            <div class="post__header-left-container">
+                <h2 class="font3-500">Confirmação de exclusão</h2>
+            </div>
+            <button class="font1-nunito close-modal">X</button>
+        </div>
+        <div class="modal-delete-post__content-container">
+            <div class="modal-delete-post__body">
+                <h3 class="modal-delete-post__title font2-500">Tem certeza que deseja excluir este post?</h3>
+                <p class="modal-delete-post__text font4-400">Essa ação não poderá ser desfeita, então pedimos que tenha
+                    cautela antes de concluir</p>
+            </div>
+            <div class="modal-delete-post__buttons-container">
+                <button class="modal-delete-post__button button--cancel font4-500">Cancelar</button>
+                <button class="modal-delete-post__button button--confirm font4-500" id="confirm-delete">Sim, excluir
+                    este post</button>
+            </div>
+        </div>
+    </dialog>
+    <div id="toast-container">
+        <div id="delete-toast" class="toast hide">
+            <div class="delete-toast__title-container">
+                <i class="fa-solid fa-circle-check"></i>
+                <h2 class="font4-500">Post deletado com sucesso!</h2>
+            </div>
+            <div class="delete-toast__text-container">
+                <p class="font5-400">O post selecionado para exlusão foi deletado, a partir de agora não aparecerá no
+                    seu feed</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

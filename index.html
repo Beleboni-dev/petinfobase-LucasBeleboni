@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
+    <link rel="stylesheet" href="./src/styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-g1ODVpSQ33+gzT84TUTjzNHpXZlq+h+D6vyZRca6kbjC6dRlt6+Q2AP7o8JgF2VXUE04n+vGGfV7xrv1JSgJrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module"src="./src/scripts/index.js" defer></script>
+    <title>Petinfo</title>
+</head>
+
+<body>
+    <main>
+        <section class="left-container">
+            <h1 class="font1-600">Petinfo</h1>
+            <h2 class="font1-600"><span>Amor</span> e <span>carinho</span> por meio do conhecimento</h2>
+            <p>Todas as informações para melhorar a vida do seu pet em um só lugar</p>
+            <div class="container-grid-images">
+                <div class="item item1"></div>
+                <div class="item item2"></div>
+                <div class="item item3"></div>
+                <div class="item item4"></div>
+            </div>
+        </section>
+        <section class="right-container">
+            <h2 class="font3-500">Login</h2>
+            <form>
+                <div>
+                    <label for="email-input" class="font4-500">E-mail</label>
+                    <input type="email" id="email-input" placeholder="Digite seu e-mail" class="font4-400">
+                </div>
+                <div>
+                    <label for="password-input" class="font4-500">Senha</label>
+                    <input type="password" id="password-input" placeholder="Digite sua senha" class="font4-400">
+                    <span class="password-status-nok font5-400 hide">Usuário ou senha inválido(s)</span>
+                </div>
+                <button class="form-button-login font4-500">Acessar</button>
+            </form>
+            <div class="right-container__signup-box-action">
+                <h3 class="font5-500">Ainda não possui conta?</h3>
+                <span class="signup-box-action__span font5-400">
+                    Clicando no botão abaixo, você pode se cadastrar rapidamente
+                </span>
+                <button class="signup-box-action__button font4-500 go-to-signup">Cadastrar</button>
+            </div>
+        </section>
+    </main> 
+</body>
+
+</html>
